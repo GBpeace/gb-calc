@@ -1,0 +1,91 @@
+/* .container{
+            width:100%;
+            height:800px;
+            background: bisque;
+            position: relative;
+            
+        } */
+       
+        
+        *{
+            margin: 0;
+            overflow: hidden;
+            /* background: linear-gradient(to right, #536976, #292e49); */
+        }
+        body{
+            background: black;
+            color: white;
+        }
+        .calculator{
+            width:600px;
+            height:600px;
+            /* background:#212F3D ; */
+            /* position: absolute; */
+            margin-left: 100px;
+            margin-top: 15px;
+            float: left;
+
+        }
+        #screen{
+            width:392px;
+            height:70px;
+            font-size: 30px;
+            text-align: right;
+            border-top: none;
+             /* border: 2px solid #AEB6Bf ; */
+            /* border-radius: 25px; */
+            background-color: black;
+            color: #AEB6BF ;
+            margin-left: 100px;
+
+        }
+        
+        
+        table{
+            width:400px;
+            height:300px;
+            font-size: 20px;
+            text-align: center;
+            margin-left: 100px;
+
+            
+
+        }
+        td:hover{
+            background:#BB0B6F  ;
+            color: white;
+            cursor: pointer;
+
+        }
+        .history{
+            background: black;
+            border: 2px solid #AEB6BF;
+            color:#AEB6BF;
+            width:400px;
+            height:418px;
+            float:right;
+            margin-top: 40px;
+            margin-right:250px ;
+        }
+        h2{
+            text-align: center;
+        }
+        .subinput{
+            width:392px;
+            height:50px;
+            margin-left: 100px;
+            background: black;
+            color: #AEB6BF;
+            border-bottom: none;
+            margin-top: 30px;
+            text-align: right;
+            font-size: 20px;
+        }
+        #history{
+            font-size: 20px;
+           
+        }
+        h2{text-align: center;margin-top: 5px;}
+        .his{
+            border-bottom: 1px solid #AEB6BF;
+        }
