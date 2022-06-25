@@ -40,6 +40,8 @@ function getvalue(val)
         function showhistory()
         {
             var history="<div>";
+            eq.reverse();
+            answers.reverse();
             for(let i=0;i<eq.length;i++)
             {
                 history+="<div class='his'><p>"+eq[i]+"</p><p>"+answers[i]+"</p></div>";
@@ -47,8 +49,41 @@ function getvalue(val)
             history+="</div>";
             document.querySelector("#history").innerHTML=history;
         }
-        function historyclean()
+
+        function historyclear()
         {
-            document.querySelector('#history').innerHTML=" ";
+        const res=confirm(" Are You Sure want to delete history ? ");
+        if(res)
+        {
+        
+            document.querySelector("#history").innerHTML=" ";
+            eq=[];
+            answers=[];
+        }
+        }
+        function lastnum()
+        { 
+            if(Inputval.value!="")
+            {
+                if(Inputval.value.length>1)
+                    Inputval.value=Inputval.value.slice(0,-1);
+                else
+                {
+                    Inputval.value=Inputval.value.slice(0,-1);
+                    Inputval.value="0";
+                }
+
+            }
+            else
+            {
+                Inputval.value="0";
+            }
         }
        
+        document.querySelector("#history").addEventListener('click',function(e)
+        {
+            console.log(e.target.id);
+            console.log(e.target);
+            questionInput.value=eq[e.target.id];
+            InputVal.value=answers[e.target.id];
+        })
