@@ -1,4 +1,4 @@
-./* .container{
+/* .container{
             width:100%;
             height:800px;
             background: bisque;
@@ -68,3 +68,29 @@
             margin-top: 40px;
             margin-right:250px ;
             overflow: scroll;
+            
+        }
+        h2{
+            text-align: center;
+        }
+        .subinput{
+            width:392px;
+            height:50px;
+            margin-left: 100px;
+            background: black;
+            color: #AEB6BF;
+            border-bottom: none;
+            margin-top: 30px;
+            text-align: right;
+            font-size: 20px;
+        }
+        #history{
+            font-size: 20px;
+            
+           
+        }
+        h2{text-align: center;margin-top: 5px;}
+        .his{
+            border-bottom: 1px solid #AEB6BF;
+            
+        }
