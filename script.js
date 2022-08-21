@@ -39,51 +39,54 @@ function getvalue(val)
         }
         function showhistory()
         {
+            
             var history="<div>";
             eq.reverse();
             answers.reverse();
             for(let i=0;i<eq.length;i++)
             {
-                history+="<div class='his'><p>"+eq[i]+"</p><p>"+answers[i]+"</p></div>";
+                history+="<div class='his'><button id='"+i+"'>gethistory</button><p>"+eq[i]+"</p><p>"+answers[i]+"</p></div>";
             }
             history+="</div>";
-            document.querySelector("#history").innerHTML=history;
+            document.querySelector('#history').innerHTML=history;
+            
         }
-
-        function historyclear()
-        {
-        const res=confirm(" Are You Sure want to delete history ? ");
-        if(res)
-        {
-        
-            document.querySelector("#history").innerHTML=" ";
-            eq=[];
-            answers=[];
-        }
-        }
-        function lastnum()
-        { 
-            if(Inputval.value!="")
+        function clearHistory()
             {
-                if(Inputval.value.length>1)
-                    Inputval.value=Inputval.value.slice(0,-1);
+                const res=confirm(" Are You Sure want to delete history ? ");
+                if(res)
+                {
+                    document.querySelector('#history').innerHTML="";
+                    eq=[];
+                    answers=[];
+                }
+               
+
+            }
+            function lastnum()
+            { 
+                if(Inputval.value!="")
+                {
+                    if(Inputval.value.length>1)
+                        Inputval.value=Inputval.value.slice(0,-1);
+                    else
+                    {
+                        Inputval.value=Inputval.value.slice(0,-1);
+                        Inputval.value="0";
+                    }
+
+                }
                 else
                 {
-                    Inputval.value=Inputval.value.slice(0,-1);
                     Inputval.value="0";
                 }
-
             }
-            else
+           
+            document.querySelector("#history").addEventListener('click',function(e)
             {
-                Inputval.value="0";
-            }
-        }
+                console.log(e.target.id);
+                console.log(e.target);
+                questionInput.value=eq[e.target.id];
+                InputVal.value=answers[e.target.id];
+            })
        
-        document.querySelector("#history").addEventListener('click',function(e)
-        {
-            console.log(e.target.id);
-            console.log(e.target);
-            questionInput.value=eq[e.target.id];
-            InputVal.value=answers[e.target.id];
-        })
